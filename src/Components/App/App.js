@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SearchResults from "../SearchResults/SearchResults";
+import Playlist from "../Playlist/Playlist";
 import "./App.css";
 
 class App extends Component {
@@ -12,7 +13,9 @@ class App extends Component {
           artist: "Yeezee",
           album: "06 Till Infinity"
         }
-      ]
+      ],
+      playlistName: "Nasty",
+      playlistTracks: "Yeezee"
     };
   }
   render() {
@@ -27,6 +30,10 @@ class App extends Component {
             {/**<!-- Add a SearchResults component --*/}
             <SearchResults searchResults={this.state.searchResults} />
             {/**<!-- Add a Playlist component -->*/}
+            <Playlist
+              name={this.state.playlistName}
+              tracks={this.state.playlistTracks}
+            />
           </div>
         </div>
       </div>
