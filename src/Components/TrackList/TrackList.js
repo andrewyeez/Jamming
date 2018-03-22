@@ -11,9 +11,9 @@ class TrackList extends Component {
     return (
       <div className="TrackList">
         {/**<!-- You will add a map method that renders a set of Track components  -->*/}
-        {this.props.searchResults.map(function(track) {
-          return <Track key={track.id} track={track} />;
-        })}
+        {this.props.searchResults.map(track => (
+          <Track key={track.id} track={track} />
+        ))}
       </div>
     );
   }
