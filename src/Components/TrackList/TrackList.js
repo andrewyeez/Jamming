@@ -7,13 +7,20 @@ class TrackList extends Component {
     super(props);
     this.state = {};
   }
+
+  showSearchResults = () => {
+    return;
+  };
+
   render() {
     return (
       <div className="TrackList">
         {/**<!-- You will add a map method that renders a set of Track components  -->*/}
-        {this.props.searchResults.map(track => (
-          <Track key={track.id} track={track} />
-        ))}
+        {this.props.searchResults !== undefined
+          ? this.props.searchResults.map(track => (
+              <Track key={track.id} track={track} />
+            ))
+          : false}
       </div>
     );
   }

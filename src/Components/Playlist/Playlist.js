@@ -12,7 +12,7 @@ class Playlist extends Component {
       <div className="Playlist">
         <input value={"New Playlist"} />
         {/**<!-- Add a TrackList component -->*/}
-        <TrackList tracks={this.props.tracks} />
+        <TrackList playlistTracks={this.props.playlistTracks} />
         <a className="Playlist-save">SAVE TO SPOTIFY</a>
       </div>
     );

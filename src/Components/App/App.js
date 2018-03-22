@@ -7,15 +7,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      playlistName: "playlistName",
+      playlistTracks: "playlistTracks",
       searchResults: [
         {
           name: "Andrew Yee",
           artist: "Yeezee",
           album: "06 Till Infinity"
         }
-      ],
-      playlistName: "Nasty",
-      playlistTracks: "Yeezee"
+      ]
     };
   }
   render() {
@@ -31,8 +31,8 @@ class App extends Component {
             <SearchResults searchResults={this.state.searchResults} />
             {/**<!-- Add a Playlist component -->*/}
             <Playlist
-              name={this.state.playlistName}
-              tracks={this.state.playlistTracks}
+              playlistName={this.state.playlistName}
+              playlistTracks={this.state.playlistTracks}
             />
           </div>
         </div>
